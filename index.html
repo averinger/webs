@@ -611,13 +611,49 @@
         <a href="/" class="logo" aria-label="Kryon — главная">
           <svg class="logo__mark" viewBox="0 0 32 32" fill="none" aria-hidden="true" width="32" height="32">
             <defs>
-              <linearGradient id="kryonGradFooter" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
-                <stop offset="0%" stop-color="#2563eb"/>
-                <stop offset="100%" stop-color="#7c3aed"/>
+              <linearGradient id="kryonMainFooter" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#1e40af"/>
+                <stop offset="30%" stop-color="#3b82f6"/>
+                <stop offset="70%" stop-color="#8b5cf6"/>
+                <stop offset="100%" stop-color="#a855f7"/>
+              </linearGradient>
+              <linearGradient id="kryonHighlightFooter" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#60a5fa" stop-opacity="0.9"/>
+                <stop offset="50%" stop-color="#93c5fd" stop-opacity="0.5"/>
+                <stop offset="100%" stop-color="#c4b5fd" stop-opacity="0.2"/>
+              </linearGradient>
+              <linearGradient id="kryonDepthFooter" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#1e3a8a" stop-opacity="0.8"/>
+                <stop offset="100%" stop-color="#4c1d95" stop-opacity="0.9"/>
+              </linearGradient>
+              <radialGradient id="kryonGlowFooter" cx="16" cy="16" r="16" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#ffffff" stop-opacity="0.6"/>
+                <stop offset="40%" stop-color="#60a5fa" stop-opacity="0.3"/>
+                <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0"/>
+              </radialGradient>
+              <linearGradient id="kryonFacetFooter" x1="8" y1="8" x2="24" y2="24" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#ffffff" stop-opacity="0.4"/>
+                <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
               </linearGradient>
             </defs>
-            <path d="M16 2 C23.5 2 30 8.5 30 16 C30 19.5 26.5 22.5 22 24 C19 25 16 26 14 25 C11 23.5 9 21 8 18 C6.5 14 7 10 9 7 C11 4 14 3 16 2 M16 4 C20 4 23 7 23 11.5 C23 14 21 16 17.5 17 C15 17.5 13 17 12 15.5 C10.5 13.5 10 11 11 9 C12 7 14 5.5 16 4 M16 6 C18.5 6 20 8 20 10 C20 11 19 12 17 12.5 C15.5 13 14.5 12.5 14 11 C13.5 9.5 14 8 15 7 C16 6 17 6 16 6" stroke="url(#kryonGradFooter)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-            <circle cx="16" cy="16" r="2" fill="url(#kryonGradFooter)"/>
+            <!-- Back facet (depth) -->
+            <path d="M16 3 C23 3 29 9 29 16 C29 20 25 23 21 24.5 C18 25.5 15 26 13 25 C10 23.5 8 21 7 18 C5.5 14 6 10 8 7 C10 4 13 3 16 3 M16 5 C20 5 23 8 23 12 C23 14 21 16 18 16.5 C16 17 14 16.5 13 15 C11.5 13.5 11 11.5 12 9.5 C13 8 15 6.5 16 5" fill="url(#kryonDepthFooter)" fill-opacity="0.6"/>
+            <!-- Main crystalline body -->
+            <path d="M16 2 C23.5 2 30 8.5 30 16 C30 19.5 26.5 22.5 22 24 C19 25 16 26 14 25 C11 23.5 9 21 8 18 C6.5 14 7 10 9 7 C11 4 14 3 16 2" fill="url(#kryonMainFooter)" stroke="url(#kryonHighlightFooter)" stroke-width="0.5" stroke-opacity="0.6"/>
+            <!-- Middle spiral ring -->
+            <path d="M16 5 C20 5 23 8 23 12 C23 14 21 16 18 16.5 C15.5 17 13.5 16.5 12.5 15 C11 13.5 10.5 11 11.5 9 C12.5 7.5 14.5 6 16 5" fill="none" stroke="url(#kryonHighlightFooter)" stroke-width="1" stroke-opacity="0.5" stroke-linecap="round"/>
+            <!-- Inner spiral ring -->
+            <path d="M16 7 C18.5 7 20 9 20 11 C20 12 19 13 17 13 C15.5 13 14.5 12.5 14 11 C13.5 9.5 14 8 15 7.5 C16 7 17 7 16 7" fill="none" stroke="url(#kryonHighlightFooter)" stroke-width="0.8" stroke-opacity="0.4" stroke-linecap="round"/>
+            <!-- Central core -->
+            <circle cx="16" cy="16" r="4.5" fill="url(#kryonGlowFooter)"/>
+            <!-- Core facet highlight -->
+            <path d="M13 13 L16 10 L19 13 L16 16 Z" fill="url(#kryonFacetFooter)"/>
+            <!-- Tiny central spark -->
+            <circle cx="16" cy="16" r="1.5" fill="#ffffff" opacity="0.8"/>
+            <!-- Top highlight edge -->
+            <path d="M16 6.5 C19 7.5 21 10 21 13" fill="none" stroke="#ffffff" stroke-width="0.6" stroke-opacity="0.3" stroke-linecap="round"/>
+            <!-- Left highlight edge -->
+            <path d="M9.5 16 C11 14 12.5 12.5 14 11.5" fill="none" stroke="#ffffff" stroke-width="0.5" stroke-opacity="0.25" stroke-linecap="round"/>
           </svg>
           <span class="logo__text">Kryon</span>
         </a>
