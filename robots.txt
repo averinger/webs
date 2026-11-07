@@ -1,0 +1,23 @@
+# WebStudio — robots.txt
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://example.com/sitemap.xml
+
+# Host (Yandex)
+Host: https://example.com
+
+# Crawl-delay (optional, for polite crawling)
+# Crawl-delay: 10
+
+# Disallow admin/private areas (adjust as needed)
+Disallow: /admin/
+Disallow: /api/
+Disallow: /private/
+Disallow: /tmp/
+Disallow: /*.json$
+Disallow: /*.xml$
+Disallow: /search?
+Disallow: /?utm_
+Disallow: /?ref=

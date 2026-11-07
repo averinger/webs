@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900">
+  <defs>
+    <linearGradient id="heroBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563eb"/>
+      <stop offset="50%" stop-color="#7c3aed"/>
+      <stop offset="100%" stop-color="#ec4899"/>
+    </linearGradient>
+    <linearGradient id="heroAccent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#60a5fa"/>
+      <stop offset="100%" stop-color="#a78bfa"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="900" fill="url(#heroBg)"/>
+  <g opacity="0.15">
+    <circle cx="200" cy="200" r="150" fill="url(#heroAccent)"/>
+    <circle cx="1000" cy="700" r="200" fill="url(#heroAccent)"/>
+    <circle cx="600" cy="450" r="80" fill="url(#heroAccent)"/>
+  </g>
+  <g fill="white" opacity="0.9">
+    <rect x="400" y="350" width="400" height="8" rx="4"/>
+    <rect x="400" y="380" width="300" height="6" rx="3"/>
+    <rect x="400" y="410" width="350" height="6" rx="3"/>
+    <rect x="400" y="460" width="200" height="48" rx="8"/>
+    <rect x="620" y="460" width="180" height="48" rx="8" opacity="0.5"/>
+    <rect x="400" y="540" width="120" height="4" rx="2"/>
+    <rect x="400" y="555" width="80" height="4" rx="2"/>
+  </g>
+  <text x="600" y="700" font-family="system-ui, sans-serif" font-size="24" font-weight="600" fill="white" opacity="0.7" text-anchor="middle">WebStudio — Hero Placeholder</text>
+</svg>

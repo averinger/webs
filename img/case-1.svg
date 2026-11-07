@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="case1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e40af"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#case1)"/>
+  <g opacity="0.1" fill="white">
+    <rect x="100" y="100" width="600" height="4" rx="2"/>
+    <rect x="100" y="120" width="450" height="3" rx="1.5"/>
+    <rect x="100" y="140" width="380" height="3" rx="1.5"/>
+    <rect x="100" y="180" width="200" height="40" rx="6"/>
+    <rect x="100" y="240" width="300" height="120" rx="8"/>
+    <rect x="420" y="240" width="280" height="120" rx="8"/>
+    <rect x="100" y="380" width="150" height="40" rx="6" opacity="0.5"/>
+  </g>
+  <text x="400" y="300" font-family="system-ui, sans-serif" font-size="20" font-weight="600" fill="white" text-anchor="middle" opacity="0.8">СтройМастер — Корпоративный сайт</text>
+  <text x="400" y="330" font-family="system-ui, sans-serif" font-size="14" fill="white" text-anchor="middle" opacity="0.6">Кейс: каталог 50+ услуг, калькулятор, Битрикс24</text>
+</svg>

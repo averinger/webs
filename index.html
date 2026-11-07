@@ -1,0 +1,692 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="claude:viewport-fit-sides" content="cover">
+
+  <title>Kryon — Веб-студия: Создание Сайтов Под Ключ</title>
+  <meta name="description" content="Kryon — профессиональная веб-студия: лендинги, корпоративные порталы, интернет-магазины. Чистый код, техническое SEO, адаптивный дизайн. Запуск за 2–4 недели. Расчёт стоимости за 5 минут.">
+  <link rel="canonical" href="https://kryon.ru/">
+
+  <!-- Favicon / App Icons -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#2563eb">
+  <meta name="msapplication-TileColor" content="#2563eb">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kryon.ru/">
+  <meta property="og:title" content="Kryon — Веб-студия: Создание Сайтов Под Ключ">
+  <meta property="og:description" content="Профессиональная веб-разработка: лендинги, корпоративные сайты, интернет-магазины. Чистый код, техническое SEO, адаптивный дизайн. Запуск за 2–4 недели.">
+  <meta property="og:image" content="https://kryon.ru/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:site_name" content="Kryon">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Kryon — Веб-студия: Создание Сайтов Под Ключ">
+  <meta name="twitter:description" content="Профессиональная веб-разработка: лендинги, корпоративные сайты, интернет-магазины. Чистый код, техническое SEO, адаптивный дизайн. Запуск за 2–4 недели.">
+  <meta name="twitter:image" content="https://kryon.ru/og-image.jpg">
+
+  <!-- Яндекс верификация (замените на свой код) -->
+  <meta name="yandex-verification" content="ваш-код-подтверждения">
+
+  <!-- Preconnect к критичным доменам -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Preload критических ресурсов -->
+  <link rel="preload" as="style" href="/css/main.css">
+  <link rel="preload" as="image" href="/img/hero.svg" type="image/svg+xml" fetchpriority="high">
+
+  <!-- Критический CSS инлайн (для LCP) -->
+  <style>
+    :root{
+      --bg:#fafafa;--fg:#1a1a2e;--muted:#6b6b7b;--accent:#2563eb;--accent-hover:#1d4ed8;
+      --card:#ffffff;--border:#e5e5eb;--focus:#2563eb;--radius:12px;--radius-sm:8px;
+      --space-xs:4px;--space-sm:8px;--space-md:16px;--space-lg:24px;--space-xl:40px;--space-2xl:64px;
+      --font-sans:'Inter',system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+      --font-mono:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
+      --max-width:1120px;--header-h:72px;
+    }
+    @media (prefers-color-scheme:dark){
+      :root:not([data-theme="light"]){
+        --bg:#0f0f1a;--fg:#f1f1f5;--muted:#9a9ab0;--accent:#60a5fa;--accent-hover:#93c5fd;
+        --card:#181826;--border:#2a2a3e;--focus:#60a5fa;color-scheme:dark;
+      }
+    }
+    :root[data-theme="dark"]{
+      --bg:#0f0f1a;--fg:#f1f1f5;--muted:#9a9ab0;--accent:#60a5fa;--accent-hover:#93c5fd;
+      --card:#181826;--border:#2a2a3e;--focus:#60a5fa;color-scheme:dark;
+    }
+    *, *::before, *::after{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+    body{
+      margin:0;font-family:var(--font-sans);font-size:16px;line-height:1.6;
+      background:var(--bg);color:var(--fg);-webkit-font-smoothing:antialiased;
+      padding-left:max(16px,env(safe-area-inset-left,0px));
+      padding-right:max(16px,env(safe-area-inset-right,0px));
+    }
+    img{max-width:100%;height:auto;display:block}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{
+      outline:2px solid var(--focus);outline-offset:2px;border-radius:4px;
+    }
+    .container{width:100%;max-width:var(--max-width);margin:0 auto;padding:0 var(--space-md)}
+    .visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+    [hidden]{display:none!important}
+  </style>
+
+  <!-- Основной CSS (preload + onload pattern) -->
+  <link rel="preload" href="/css/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="/css/main.css"></noscript>
+
+  <!-- Шрифты: WOFF2, font-display: swap -->
+  <style>
+    @font-face{
+      font-family:'Inter';src:url('/fonts/inter-var.woff2') format('woff2');
+      font-display:swap;font-weight:100 900;font-stretch:75% 125%;
+    }
+    @font-face{
+      font-family:'JetBrains Mono';src:url('/fonts/jetbrains-mono.woff2') format('woff2');
+      font-display:swap;font-weight:400 700;
+    }
+  </style>
+
+  <!-- Schema.org: WebSite + Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Kryon",
+    "url": "https://kryon.ru/",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://kryon.ru/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    },
+    "inLanguage": "ru-RU"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Kryon",
+    "url": "https://kryon.ru/",
+    "logo": "https://kryon.ru/favicon-512.png",
+    "sameAs": [
+      "https://t.me/kryon_studio",
+      "https://vk.com/kryon_studio",
+      "https://github.com/kryon-studio"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+7-999-000-11-22",
+      "contactType": "customer service",
+      "availableLanguage": "Russian",
+      "areaServed": "RU"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "RU",
+      "addressLocality": "Москва",
+      "streetAddress": "ул. Примерная, 1"
+    }
+  }
+  </script>
+</head>
+<body>
+  <!-- Хэдер -->
+  <header class="header" role="banner">
+    <div class="container header__inner">
+      <a href="/" class="logo" aria-label="Kryon — главная">
+        <svg class="logo__mark" viewBox="0 0 32 32" fill="none" aria-hidden="true" width="32" height="32">
+          <defs>
+            <linearGradient id="kryonGrad" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#2563eb"/>
+              <stop offset="100%" stop-color="#7c3aed"/>
+            </linearGradient>
+          </defs>
+          <path d="M16 2 C23.5 2 30 8.5 30 16 C30 19.5 26.5 22.5 22 24 C19 25 16 26 14 25 C11 23.5 9 21 8 18 C6.5 14 7 10 9 7 C11 4 14 3 16 2 M16 4 C20 4 23 7 23 11.5 C23 14 21 16 17.5 17 C15 17.5 13 17 12 15.5 C10.5 13.5 10 11 11 9 C12 7 14 5.5 16 4 M16 6 C18.5 6 20 8 20 10 C20 11 19 12 17 12.5 C15.5 13 14.5 12.5 14 11 C13.5 9.5 14 8 15 7 C16 6 17 6 16 6" stroke="url(#kryonGrad)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <circle cx="16" cy="16" r="2" fill="url(#kryonGrad)"/>
+        </svg>
+        <span class="logo__text">Kryon</span>
+      </a>
+      <nav class="nav" aria-label="Главное меню">
+        <ul class="nav__list" role="list">
+          <li><a href="#services" class="nav__link">Услуги</a></li>
+          <li><a href="#process" class="nav__link">Процесс</a></li>
+          <li><a href="#portfolio" class="nav__link">Работы</a></li>
+          <li><a href="#about" class="nav__link">О нас</a></li>
+          <li><a href="#contact" class="nav__link nav__link--cta">Связаться</a></li>
+        </ul>
+      </nav>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Открыть меню" hidden>
+        <span class="nav-toggle__bar" aria-hidden="true"></span>
+        <span class="nav-toggle__bar" aria-hidden="true"></span>
+        <span class="nav-toggle__bar" aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero секция -->
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <p class="hero__eyebrow">Профессиональная веб-разработка с 2018 года</p>
+          <h1 id="hero-title" class="hero__title">Создаём сайты, которые приносят клиентов</h1>
+          <p class="hero__description">Лендинги, корпоративные порталы, интернет-магазины. Чистый код, техническое SEO, адаптивный дизайн. Запускаем за 2–4 недели.</p>
+          <div class="hero__actions">
+            <a href="#contact" class="btn btn--primary">Обсудить проект</a>
+            <a href="#portfolio" class="btn btn--secondary">Посмотреть работы</a>
+          </div>
+          <ul class="hero__stats" role="list" aria-label="Статистика студии">
+            <li><strong class="stat__value">120+</strong><span class="stat__label">Проектов</span></li>
+            <li><strong class="stat__value">98%</strong><span class="stat__label">Клиентов рекомендуют</span></li>
+            <li><strong class="stat__value">4.9/5</strong><span class="stat__label">Оценка на Яндекс.Картах</span></li>
+          </ul>
+        </div>
+        <figure class="hero__visual" aria-hidden="true">
+          <picture>
+            <source type="image/svg+xml" srcset="/img/hero.svg">
+            <img src="/img/hero.svg" alt="" width="720" height="540" fetchpriority="high" loading="eager">
+          </picture>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Услуги -->
+    <section id="services" class="section services" aria-labelledby="services-title">
+      <div class="container">
+        <header class="section__header">
+          <h2 id="services-title" class="section__title">Что мы делаем</h2>
+          <p class="section__description">Полный цикл разработки: от проектирования до запуска и поддержки</p>
+        </header>
+        <ul class="services__grid" role="list">
+          <li class="service-card">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="24" height="24">
+                <rect x="3" y="3" width="18" height="18" rx="2"/>
+                <path d="M3 9h18M9 21V9"/>
+              </svg>
+            </div>
+            <h3 class="service-card__title">Лендинги под ключ</h3>
+            <p class="service-card__description">Продающие одностраничники с высокой конверсией. Прототипирование, копирайтинг, дизайн, разработка, настройка аналитики.</p>
+            <ul class="service-card__features" role="list">
+              <li>Готов к рекламе за 10–14 дней</li>
+              <li>LCP < 2.5с, CLS < 0.1</li>
+              <li>Интеграция с CRM и рассылками</li>
+            </ul>
+            <span class="service-card__price">от 65 000 ₽</span>
+          </li>
+          <li class="service-card">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="24" height="24">
+                <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>
+              </svg>
+            </div>
+            <h3 class="service-card__title">Корпоративные сайты</h3>
+            <p class="service-card__description">Многостраничные порталы для бизнеса: каталоги услуг, блог, вакансии, личный кабинет, интеграция с 1С/Битрикс24.</p>
+            <ul class="service-card__features" role="list">
+              <li>CMS на выбор (WordPress, ModX, Headless)</li>
+              <li>Ролевая модель доступа</li>
+              <li>Мультиязычность и мультирегиональность</li>
+            </ul>
+            <span class="service-card__price">от 180 000 ₽</span>
+          </li>
+          <li class="service-card">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="24" height="24">
+                <circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/>
+                <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57L19 5H6.5"/>
+              </svg>
+            </div>
+            <h3 class="service-card__title">Интернет-магазины</h3>
+            <p class="service-card__description">E-commerce решения на WordPress+WooCommerce, OpenCart или кастомном стеке. Оплата, доставка, складской учёт, импорт товаров.</p>
+            <ul class="service-card__features" role="list">
+              <li>Коллекции, фильтры, сравнение товаров</li>
+              <li>Интеграция с Яндекс.Маркет, Авито</li>
+              <li>Автоматизация заказов и email-воронок</li>
+            </ul>
+            <span class="service-card__price">от 250 000 ₽</span>
+          </li>
+          <li class="service-card">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="24" height="24">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+            </div>
+            <h3 class="service-card__title">Технический SEO-аудит</h3>
+            <p class="service-card__description">Глубокий разбор: Core Web Vitals, индексация, дубли, структура,_schema.org_, скорость, мобильная юзабилити. Чек-лист 150+ пунктов.</p>
+            <ul class="service-card__features" role="list">
+              <li>Отчёт в PDF + приоритизированный бэклог</li>
+              <li>Помощь в внедрении правок</li>
+              <li>Контроль через Search Console / Вебмастер</li>
+            </ul>
+            <span class="service-card__price">от 35 000 ₽</span>
+          </li>
+          <li class="service-card">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="24" height="24">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                <path d="M9 12l2 2 4-4"/>
+              </svg>
+            </div>
+            <h3 class="service-card__title">Поддержка и развитие</h3>
+            <p class="service-card__description">Ежемесячное сопровождение: обновления безопасности, бэкапы, мониторинг uptime, правки контента, новые разделы, A/B-тесты.</p>
+            <ul class="service-card__features" role="list">
+              <li>SLA: реакция за 4 часа в рабочее время</li>
+              <li>Ежемесячный отчёт по метрикам</li>
+              <li>Консультации по маркетингу и UX</li>
+            </ul>
+            <span class="service-card__price">от 15 000 ₽/мес</span>
+          </li>
+          <li class="service-card">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="24" height="24">
+                <polyline points="16 18 22 12 16 6"/>
+                <polyline points="8 6 2 12 8 18"/>
+              </svg>
+            </div>
+            <h3 class="service-card__title">Редизайн и миграция</h3>
+            <p class="service-card__description">Обновление устаревших сайтов без потери трафика: сохранение URL, 301-редиректы, перенос контента, улучшение UX/UI.</p>
+            <ul class="service-card__features" role="list">
+              <li>Аудит текущего SEO перед стартом</li>
+              <li>Поэтапная миграция без даунтайма</li>
+              <li>Контроль позиций 3 месяца после запуска</li>
+            </ul>
+            <span class="service-card__price">от 120 000 ₽</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Процесс -->
+    <section id="process" class="section process" aria-labelledby="process-title">
+      <div class="container">
+        <header class="section__header">
+          <h2 id="process-title" class="section__title">Как мы работаем</h2>
+          <p class="section__description">Прозрачный процесс с фиксированными сроками и бюджетом</p>
+        </header>
+        <ol class="process__steps" role="list">
+          <li class="process-step">
+            <span class="process-step__number" aria-hidden="true">01</span>
+            <div class="process-step__content">
+              <h3 class="process-step__title">Бриф и исследование</h3>
+              <p class="process-step__description">Заполняете краткий бриф (10 минут) — мы анализируем конкурентов, нишу, целевую аудиторию и формируем ТЗ с оценкой сроков и стоимости.</p>
+            </div>
+          </li>
+          <li class="process-step">
+            <span class="process-step__number" aria-hidden="true">02</span>
+            <div class="process-step__content">
+              <h3 class="process-step__title">Прототипирование и структура</h3>
+              <p class="process-step__description">Создаём интерактивный прототип (wireframes) всех ключевых страниц. Согласовываем пользовательские сценарии, навигацию, контент-блоки. Бесплатные правки на этом этапе.</p>
+            </div>
+          </li>
+          <li class="process-step">
+            <span class="process-step__number" aria-hidden="true">03</span>
+            <div class="process-step__content">
+              <h3 class="process-step__title">UI-дизайн</h3>
+              <p class="process-step__description">Рисуем дизайн-систему: цвета, типографика, компоненты. Готовим макеты всех страниц в Figma. Даём доступ к комментированию — вносим правки до полного одобрения.</p>
+            </div>
+          </li>
+          <li class="process-step">
+            <span class="process-step__number" aria-hidden="true">04</span>
+            <div class="process-step__content">
+              <h3 class="process-step__title">Разработка</h3>
+              <p class="process-step__description">Верстаем семантичный HTML5, пишем чистый JS/TS, настраиваем CMS. Внедряем Schema.org, Open Graph, настраиваем 301-редиректы, robots.txt, sitemap.xml. Code review на каждом коммите.</p>
+            </div>
+          </li>
+          <li class="process-step">
+            <span class="process-step__number" aria-hidden="true">05</span>
+            <div class="process-step__content">
+              <h3 class="process-step__title">Тестирование и запуск</h3>
+              <p class="process-step__description">Кроссбраузерная проверка (Chrome, Firefox, Safari, Яндекс.Браузер), мобильные устройства, Lighthouse ≥ 90, валидация микроразметки, настройка SSL, подключение аналитики.</p>
+            </div>
+          </li>
+          <li class="process-step">
+            <span class="process-step__number" aria-hidden="true">06</span>
+            <div class="process-step__content">
+              <h3 class="process-step__title">Передача и поддержка</h3>
+              <p class="process-step__description">Обучаем работу с админкой, передаём доступы и документацию. 3 месяца гарантийной поддержки в подарок. Далее — по желанию на тарифе «Поддержка».</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Портфолио -->
+    <section id="portfolio" class="section portfolio" aria-labelledby="portfolio-title">
+      <div class="container">
+        <header class="section__header">
+          <h2 id="portfolio-title" class="section__title">Последние работы</h2>
+          <p class="section__description">Кейсы из разных ниш: B2B, e-commerce, сервисы, медиа</p>
+        </header>
+        <ul class="portfolio__grid" role="list">
+          <li class="portfolio-item">
+            <article class="case-card">
+              <figure class="case-card__image">
+                <picture>
+                  <source type="image/svg+xml" srcset="/img/case-1.svg">
+                  <img src="/img/case-1.svg" alt="Сайт строительной компании «СтройМастер»" width="480" height="270" loading="lazy">
+                </picture>
+              </figure>
+              <div class="case-card__content">
+                <span class="case-card__tag">Корпоративный сайт</span>
+                <h3 class="case-card__title">СтройМастер — строительная компания</h3>
+                <p class="case-card__description">Каталог услуг 50+ позиций, калькулятор стоимости, интеграция с Битрикс24, мультирегиональность (Москва, СПб, Казань).</p>
+                <ul class="case-card__metrics" role="list">
+                  <li><strong>+42%</strong> лидов за 3 месяца</li>
+                  <li><strong>LCP 1.8с</strong> на мобильных</li>
+                </ul>
+                <a href="/case/stroymaster/" class="case-card__link">Подробнее о кейсе →</a>
+              </div>
+            </article>
+          </li>
+          <li class="portfolio-item">
+            <article class="case-card">
+              <figure class="case-card__image">
+                <picture>
+                  <source type="image/svg+xml" srcset="/img/case-2.svg">
+                  <img src="/img/case-2.svg" alt="Интернет-магазин косметики «GlowSkin»" width="480" height="270" loading="lazy">
+                </picture>
+              </figure>
+              <div class="case-card__content">
+                <span class="case-card__tag">E-commerce</span>
+                <h3 class="case-card__title">GlowSkin — натуральная косметика</h3>
+                <p class="case-card__description">3000+ SKU, подбор по типу кожи, подписка на автодоставку, интеграция с МойСклад, Яндекс.Маркет, Ozon. Headless на Next.js + WordPress.</p>
+                <ul class="case-card__metrics" role="list">
+                  <li><strong>+67%</strong> конверсия после редизайна</li>
+                  <li><strong>98/100</strong> PageSpeed Mobile</li>
+                </ul>
+                <a href="/case/glowskin/" class="case-card__link">Подробнее о кейсе →</a>
+              </div>
+            </article>
+          </li>
+          <li class="portfolio-item">
+            <article class="case-card">
+              <figure class="case-card__image">
+                <picture>
+                  <source type="image/svg+xml" srcset="/img/case-3.svg">
+                  <img src="/img/case-3.svg" alt="Лендинг SaaS-сервиса «TaskFlow»" width="480" height="270" loading="lazy">
+                </picture>
+              </figure>
+              <div class="case-card__content">
+                <span class="case-card__tag">Лендинг + SEO</span>
+                <h3 class="case-card__title">TaskFlow — трекер задач для команд</h3>
+                <p class="case-card__description">Продающий лендинг для B2B SaaS, демо-тур продукта, интеграция с AmoCRM, A/B-тестирование заголовков. Техническое SEO с нуля.</p>
+                <ul class="case-card__metrics" role="list">
+                  <li><strong>Топ-3</strong> по 12 целевым запросам</li>
+                  <li><strong>CAC ↓ 35%</strong> за полгода</li>
+                </ul>
+                <a href="/case/taskflow/" class="case-card__link">Подробнее о кейсе →</a>
+              </div>
+            </article>
+          </li>
+        </ul>
+        <div class="portfolio__cta">
+          <a href="/portfolio/" class="btn btn--outline">Все кейсы в портфолио</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- О нас -->
+    <section id="about" class="section about" aria-labelledby="about-title">
+      <div class="container">
+        <header class="section__header">
+          <h2 id="about-title" class="section__title">О студии</h2>
+          <p class="section__description">Маленькая команда sénior-разработчиков, которые любят свой ремесло</p>
+        </header>
+        <div class="about__grid">
+          <div class="about__content">
+            <h3 class="about__subtitle">Мы не нанимаем джунов на ваш проект</h3>
+            <p>Каждый участник команды — 5+ лет коммерческого опыта. Дизайнер прошёл школу Artemy Lebedev Studio. Backend-разработчик держал нагрузку 100k RPS. SEO-специалист выводил проекты в топ-3 по высококонкурентным запросам.</p>
+            <p>Работаем по контракту с поэтапной оплатой. Никаких предоплат 100% — оплачиваете только за принятые этапы. Исходный код и доступы — ваши навсегда.</p>
+            <ul class="about__values" role="list">
+              <li><strong>Честность:</strong> скажем, если задачу можно решить дешевле или проще</li>
+              <li><strong>Качество:</strong> код проходит линтеры, тесты и code review</li>
+              <li><strong>Сроки:</strong> если обещали дату — сдадим к ней или предупредим за неделю</li>
+              <li><strong>Результат:</strong> сайт должен приносить деньги, а не просто «быть в интернете»</li>
+            </ul>
+          </div>
+          <aside class="about__team" aria-label="Команда">
+            <h3 class="about__team-title" class="visually-hidden">Наша команда</h3>
+            <ul class="team__list" role="list">
+              <li class="team-member">
+                <div class="team-member__avatar" aria-hidden="true">
+                  <svg viewBox="0 0 40 40" fill="none" width="40" height="40"><circle cx="20" cy="14" r="8" stroke="currentColor" stroke-width="1.5"/><path d="M4 38c0-8.8 7.2-16 16-16s16 7.2 16 16" stroke="currentColor" stroke-width="1.5"/></svg>
+                </div>
+                <div class="team-member__info">
+                  <strong class="team-member__name">Александр Петров</strong>
+                  <span class="team-member__role">Основатель, технический директор</span>
+                </div>
+              </li>
+              <li class="team-member">
+                <div class="team-member__avatar" aria-hidden="true">
+                  <svg viewBox="0 0 40 40" fill="none" width="40" height="40"><circle cx="20" cy="14" r="8" stroke="currentColor" stroke-width="1.5"/><path d="M4 38c0-8.8 7.2-16 16-16s16 7.2 16 16" stroke="currentColor" stroke-width="1.5"/></svg>
+                </div>
+                <div class="team-member__info">
+                  <strong class="team-member__name">Мария Сидорова</strong>
+                  <span class="team-member__role">Ведущий UI/UX дизайнер</span>
+                </div>
+              </li>
+              <li class="team-member">
+                <div class="team-member__avatar" aria-hidden="true">
+                  <svg viewBox="0 0 40 40" fill="none" width="40" height="40"><circle cx="20" cy="14" r="8" stroke="currentColor" stroke-width="1.5"/><path d="M4 38c0-8.8 7.2-16 16-16s16 7.2 16 16" stroke="currentColor" stroke-width="1.5"/></svg>
+                </div>
+                <div class="team-member__info">
+                  <strong class="team-member__name">Дмитрий Волков</strong>
+                  <span class="team-member__role">Senior Fullstack разработчик</span>
+                </div>
+              </li>
+              <li class="team-member">
+                <div class="team-member__avatar" aria-hidden="true">
+                  <svg viewBox="0 0 40 40" fill="none" width="40" height="40"><circle cx="20" cy="14" r="8" stroke="currentColor" stroke-width="1.5"/><path d="M4 38c0-8.8 7.2-16 16-16s16 7.2 16 16" stroke="currentColor" stroke-width="1.5"/></svg>
+                </div>
+                <div class="team-member__info">
+                  <strong class="team-member__name">Елена Козлова</strong>
+                  <span class="team-member__role">SEO-стратег, контент-менеджер</span>
+                </div>
+              </li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- Контакты / Форма -->
+    <section id="contact" class="section contact" aria-labelledby="contact-title">
+      <div class="container">
+        <header class="section__header">
+          <h2 id="contact-title" class="section__title">Обсудим ваш проект?</h2>
+          <p class="section__description">Расскажите задачу — пришлю расчёт стоимости и сроков за 24 часа. Без обязательств.</p>
+        </header>
+        <div class="contact__grid">
+          <form class="contact-form" action="https://api.example.com/forms/contact" method="POST" id="contact-form" novalidate>
+            <div class="form__row">
+              <div class="form__group">
+                <label for="name" class="form__label">Имя <span aria-hidden="true">*</span></label>
+                <input type="text" id="name" name="name" class="form__input" required autocomplete="name" aria-required="true" placeholder="Иван Иванов">
+              </div>
+              <div class="form__group">
+                <label for="email" class="form__label">Email <span aria-hidden="true">*</span></label>
+                <input type="email" id="email" name="email" class="form__input" required autocomplete="email" aria-required="true" placeholder="ivan@example.com">
+              </div>
+            </div>
+            <div class="form__row">
+              <div class="form__group">
+                <label for="phone" class="form__label">Телефон / Telegram</label>
+                <input type="tel" id="phone" name="phone" class="form__input" autocomplete="tel" placeholder="+7 (999) 000-11-22 или @username">
+              </div>
+              <div class="form__group">
+                <label for="budget" class="form__label">Примерный бюджет</label>
+                <select id="budget" name="budget" class="form__select">
+                  <option value="">Не определился</option>
+                  <option value="65-100">65 000 – 100 000 ₽</option>
+                  <option value="100-200">100 000 – 200 000 ₽</option>
+                  <option value="200-400">200 000 – 400 000 ₽</option>
+                  <option value="400+">400 000 ₽ и выше</option>
+                </select>
+              </div>
+            </div>
+            <div class="form__group">
+              <label for="task" class="form__label">Задача <span aria-hidden="true">*</span></label>
+              <textarea id="task" name="task" class="form__textarea" rows="5" required aria-required="true" placeholder="Нужен лендинг для запуска рекламы к месяцу. Целевая аудитория — владельцы малого бизнеса. Есть брендбук, тексты писать не нужно. Хочу интеграцию с AmoCRM."></textarea>
+            </div>
+            <div class="form__group form__consent">
+              <input type="checkbox" id="consent" name="consent" class="form__checkbox" required aria-required="true">
+              <label for="consent" class="form__checkbox-label">Согласен на обработку персональных данных согласно <a href="/privacy/" target="_blank" rel="noopener">политике конфиденциальности</a> <span aria-hidden="true">*</span></label>
+            </div>
+            <button type="submit" class="btn btn--primary btn--full" id="submit-btn">Отправить заявку</button>
+            <p class="form__note" aria-live="polite" hidden></p>
+          </form>
+          <aside class="contact__info" aria-label="Контактная информация">
+            <h3 class="contact__info-title">Другие способы связи</h3>
+            <address class="contact__list">
+              <div class="contact__item">
+                <span class="contact__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                </span>
+                <div>
+                  <p class="contact__label">Телефон</p>
+                  <a href="tel:+79990001122" class="contact__value">+7 (999) 000-11-22</a>
+                  <p class="contact__hint">Пн–Пт 10:00–19:00 (МСК)</p>
+                </div>
+              </div>
+              <div class="contact__item">
+                <span class="contact__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                </span>
+                <div>
+                  <p class="contact__label">Email</p>
+                  <a href="mailto:hello@webstudio.example" class="contact__value">hello@webstudio.example</a>
+                  <p class="contact__hint">Отвечаем в рабочее время</p>
+                </div>
+              </div>
+              <div class="contact__item">
+                <span class="contact__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M21 10V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h3"/><path d="M3 18a2 2 0 0 0 2 2h6"/><path d="M15 10V6a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v4"/></svg>
+                </span>
+                <div>
+                  <p class="contact__label">Telegram</p>
+                  <a href="https://t.me/webstudio" target="_blank" rel="noopener" class="contact__value">@webstudio</a>
+                  <p class="contact__hint">Быстрый ответ здесь</p>
+                </div>
+              </div>
+              <div class="contact__item">
+                <span class="contact__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                </span>
+                <div>
+                  <p class="contact__label">Офис</p>
+                  <address class="contact__value" style="font-style:normal;line-height:1.5">г. Москва, ул. Примерная, 1<br>БЦ «Пример», 5 этаж</address>
+                  <p class="contact__hint">Встречи по договорённости</p>
+                </div>
+              </div>
+            </address>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Футер -->
+  <footer class="footer" role="contentinfo">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="/" class="logo" aria-label="Kryon — главная">
+          <svg class="logo__mark" viewBox="0 0 32 32" fill="none" aria-hidden="true" width="32" height="32">
+            <defs>
+              <linearGradient id="kryonGradFooter" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#2563eb"/>
+                <stop offset="100%" stop-color="#7c3aed"/>
+              </linearGradient>
+            </defs>
+            <path d="M16 2 C23.5 2 30 8.5 30 16 C30 19.5 26.5 22.5 22 24 C19 25 16 26 14 25 C11 23.5 9 21 8 18 C6.5 14 7 10 9 7 C11 4 14 3 16 2 M16 4 C20 4 23 7 23 11.5 C23 14 21 16 17.5 17 C15 17.5 13 17 12 15.5 C10.5 13.5 10 11 11 9 C12 7 14 5.5 16 4 M16 6 C18.5 6 20 8 20 10 C20 11 19 12 17 12.5 C15.5 13 14.5 12.5 14 11 C13.5 9.5 14 8 15 7 C16 6 17 6 16 6" stroke="url(#kryonGradFooter)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            <circle cx="16" cy="16" r="2" fill="url(#kryonGradFooter)"/>
+          </svg>
+          <span class="logo__text">Kryon</span>
+        </a>
+        <p class="footer__tagline">Создаём сайты, которые приносят клиенты. С 2018 года.</p>
+      </div>
+      <nav class="footer__nav" aria-label="Навигация по сайту">
+        <div class="footer__nav-col">
+          <h4 class="footer__nav-title">Услуги</h4>
+          <ul role="list">
+            <li><a href="#services">Лендинги</a></li>
+            <li><a href="#services">Корпоративные сайты</a></li>
+            <li><a href="#services">Интернет-магазины</a></li>
+            <li><a href="#services">SEO-аудит</a></li>
+            <li><a href="#services">Поддержка</a></li>
+          </ul>
+        </div>
+        <div class="footer__nav-col">
+          <h4 class="footer__nav-title">Компания</h4>
+          <ul role="list">
+            <li><a href="#about">О нас</a></li>
+            <li><a href="#portfolio">Портфолио</a></li>
+            <li><a href="/process/">Процесс работы</a></li>
+            <li><a href="/reviews/">Отзывы</a></li>
+            <li><a href="/vacancies/">Вакансии</a></li>
+          </ul>
+        </div>
+        <div class="footer__nav-col">
+          <h4 class="footer__nav-title">Правовое</h4>
+          <ul role="list">
+            <li><a href="/privacy/">Политика конфиденциальности</a></li>
+            <li><a href="/terms/">Условия использования</a></li>
+            <li><a href="/cookie/">Cookie-политика</a></li>
+            <li><a href="/agreement/">Договор-оферта</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="footer__social">
+        <h4 class="footer__nav-title">Мы в соцсетях</h4>
+        <ul class="social__list" role="list">
+          <li><a href="https://t.me/kryon_studio" target="_blank" rel="noopener" aria-label="Telegram" class="social__link"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a></li>
+          <li><a href="https://vk.com/kryon_studio" target="_blank" rel="noopener" aria-label="ВКонтакте" class="social__link"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M19.8 4.2a6.36 6.36 0 0 0-2.9-1.8C15.4.7 14.3 0 12 0s-3.4.7-4.9 2.4a6.36 6.36 0 0 0-2.9 1.8C.7 5.4 0 6.7 0 8.4v7.2c0 1.7.7 3 2.4 4.2a6.36 6.36 0 0 0 1.8 2.9c1.6 1.5 2.9 2.4 4.9 2.4 1.7 0 3.4-.7 4.9-2.4a6.36 6.36 0 0 0 2.9-1.8c1.5-1.5 2.4-2.9 2.4-4.9V8.4c0-1.7-.7-3-2.4-4.2zM12 19.2c-1.5 0-2.8-.7-3.6-1.8-.8-1.1-1.2-2.4-1.2-3.9s.4-2.8 1.2-3.9c.8-1.1 2.1-1.8 3.6-1.8s2.8.7 3.6 1.8c1.1.8 1.8 2.1 1.8 3.6s-.7 2.8-1.8 3.6c-.8 1.1-2.1 1.8-3.6 1.8zm4.8-9.6c0 1.5-.7 2.7-1.8 3.3-.8.5-1.8.8-3 .8s-2.2-.3-3-.8c-1.1-.6-1.8-1.8-1.8-3.3s.7-2.7 1.8-3.3c.8-.5 1.8-.8 3-.8s2.2.3 3 .8c1.1.6 1.8 1.8 1.8 3.3z"/></svg></a></li>
+          <li><a href="https://github.com/kryon-studio" target="_blank" rel="noopener" aria-label="GitHub" class="social__link"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container footer__bottom-inner">
+        <p class="footer__copyright">&copy; 2018–2026 Kryon. Все права защищены.</p>
+        <p class="footer__made">Сделано с заботой о качестве кода и SEO</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JSON-LD для BreadcrumbList (на всех страницах кроме главной) -->
+  <!-- Для главной не нужен, но оставлен как пример структуры -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Главная",
+      "item": "https://example.com/"
+    }]
+  }
+  </script>
+
+  <!-- Отложенный JS -->
+  <script src="/js/main.js" defer></script>
+</body>
+</html>
